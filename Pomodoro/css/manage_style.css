@@ -114,18 +114,13 @@ label {
   border: none;
 }
 
-/* .btn {
-  width: 400px;
-  height: 35px;
-  margin-top: 13px;
-  border-radius: 5px;
-} */
+
 
 .btn {
   width: 400px;
   height: 35px;
-  margin: 0 auto; /* Ini akan membuat tombol berada di tengah secara horizontal */
-  display: block; /* Ini diperlukan agar margin: auto; berfungsi */
+  margin: 0 auto; 
+  display: block; 
   border-radius: 5px;
   margin-top: 25px;
   font-size: 20px;

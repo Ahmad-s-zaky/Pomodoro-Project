@@ -1,0 +1,31 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.title {
+    font-size: 2rem;
+    color: white;
+    border-bottom: 2px solid #B4A5A5 ;
+    width: 522px;
+    text-align: center;
+}
+
+body {
+    background-color: #301B3F;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    flex-direction: column;
+}
+
+header {  
+    text-align: center;
+    background-color: #151515;
+    height: 70px;
+}
+
+.logo img {
+    width: 60px;
+}
