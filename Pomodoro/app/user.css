@@ -1,0 +1,104 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: 2rem;
+  color: white;
+  border-bottom: 2px solid #b4a5a5;
+  width: 522px;
+  text-align: center;
+}
+
+body {
+  background-color: #301b3f;
+  height: 100vh;
+  margin: 0;
+  font-family: "Quicksand", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  text-align: center;
+  background-color: #151515;
+  height: 80px;
+}
+
+.logo img {
+  width: 60px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 150px);
+}
+
+.box-container {
+  width: 100%;
+  max-width: 870px;
+  background-color: #3c415c; /* Warna latar belakang kotak */
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.profile-container {
+  width: 100%;
+  background-color: #b4a5a5;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+}
+
+.profile-details {
+  margin-left: 50px;
+}
+
+.profile-details h2 {
+  margin: 0;
+}
+
+.profile-details p {
+  margin: 5px 0;
+}
+
+.profile-picture img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.history-container {
+  width: 100%;
+  background-color: #b4a5a5;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.checkbox {
+  display: flex;
+  justify-content: space-between; /* Memisahkan label dan kotak centang */
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.checkbox input[type="checkbox"] {
+  transform: scale(1.5);
+  width: 15px;
+  height: 15px;
+}
+
+footer {
+  text-align: center;
+}
