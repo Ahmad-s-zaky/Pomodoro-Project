@@ -1,8 +1,15 @@
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: "Quicksand", sans-serif;
+  background-color: #301B3F;
+  height: 100vh;
   margin: 0;
-  padding: 0;
-  background-color: #301b3f;
+  font-family: 'Quicksand', sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
@@ -15,6 +22,33 @@ header {
   width: 60px;
 }
 
+.nav-list ul {
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem 1rem;
+}
+
+.nav-list ul li {
+  list-style-type: none;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.nav-list ul li a {
+  padding: 0.5rem 1.5rem;
+  border-radius: 3px;
+  text-decoration: none;
+  color: white;
+  background-color: #3c415c;
+  position: relative;
+  /* padding: auto; */
+  transition: background-color 0.3s;
+}
+
+.nav-list ul li a:hover {
+  background-color: #151515;
+}
 .container {
   /* display: flex; */
   /* flex-direction: column; */
@@ -103,7 +137,7 @@ label {
 }
 
 .nama-saya {
-  background-color: #ffff;
+  background-color: #d9d9d9;
   width: 700px;
   height: 50px;
   font-size: 20px;
@@ -114,14 +148,33 @@ label {
   border: none;
 }
 
-
-
-.btn {
+#animated-button {
   width: 400px;
   height: 35px;
-  margin: 0 auto; 
-  display: block; 
+  margin: 0 auto;
+  display: block;
   border-radius: 5px;
-  margin-top: 25px;
+  margin-top: 35px;
   font-size: 20px;
+  background: #b4a5a5;
+  border: 1px solid #ccc;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+#animated-button:hover {
+  background-color: #7e7e7e; /* Mengubah warna latar belakang saat hover */
+  cursor: pointer;
+}
+
+#animated-button.clicked {
+  background-color: #ffff; /* Mengubah warna latar belakang saat tombol diklik */
+}
+
+#animated-btn:hover {
+  background-color: #7e7e7e; /* Mengubah warna latar belakang saat hover */
+}
+
+#animated-btn.clicked {
+  background-color: #4caf50; /* Mengubah warna latar belakang saat tombol diklik */
 }

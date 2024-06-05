@@ -1,31 +1,161 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .title {
-    font-size: 2rem;
-    color: white;
-    border-bottom: 2px solid #B4A5A5 ;
-    width: 522px;
-    text-align: center;
+  font-size: 2rem;
+  color: white;
+  border-bottom: 2px solid #b4a5a5;
+  width: 522px;
+  text-align: center;
 }
 
 body {
-    background-color: #301B3F;
-    height: 100vh;
-    margin: 0;
-    font-family: 'Quicksand', sans-serif;
-    flex-direction: column;
+  background-color: #301b3f;
+  height: 100vh;
+  margin: 0;
+  font-family: "Quicksand", sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
-header {  
-    text-align: center;
-    background-color: #151515;
-    height: 70px;
+header {
+  text-align: center;
+  background-color: #151515;
+  height: 80px;
 }
 
 .logo img {
-    width: 60px;
+  width: 60px;
+}
+
+.nav-list ul {
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem 1rem;
+}
+
+.nav-list ul li {
+  list-style-type: none;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.nav-list ul li a {
+  padding: 0.5rem 1.5rem;
+  border-radius: 3px;
+  text-decoration: none;
+  color: white;
+  background-color: #3c415c;
+  position: relative;
+  /* padding: auto; */
+  transition: background-color 0.3s;
+}
+
+.nav-list ul li a:hover {
+  background-color: #151515;
+}
+.container {
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: center;
+    align-items: center; */
+  width: 890px;
+  height: 500px;
+  background-color: #3c415c;
+  border-radius: 10px;
+  padding: 20px;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+h2 {
+  text-align: center;
+  color: white;
+  font-size: 24px;
+}
+
+.user {
+  width: 300px;
+  /* display: flex; */
+  //height:350px;
+  padding: 20px;
+  background: #b4a5a5;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-left: 30px;
+}
+
+.user1 {
+  text-align: center;
+  margin-bottom: 50px;
+  /* background: red; */
+}
+
+.login-box h4 {
+  margin: 10px 0;
+  //margin-top: 10px;
+  font-size: 16px;
+  width: 100px;
+  text-align: left;
+}
+.login-box input[type="text"],
+.login-box input[type="password"],
+.login-box input[type="email"] {
+  width: 150px;
+  height: 30px;
+  padding: 5px;
+  margin-bottom: 2px;
+  border: 1px solid #e4e4e4;
+  border-radius: 10px;
+  box-sizing: border-box;
+  background: #e4e4e4;
+}
+.login-box input[type="button"] {
+  width: 260px;
+  height: 25px;
+  padding: 5px;
+  background-color: #e4e4e4;
+  border: none;
+  border-radius: 7px;
+  color: black;
+  cursor: pointer;
+  box-sizing: border-box;
+  margin-top: 30px;
+  text-align: center;
+}
+.login-box input[type="button"] {
+  width: 260px;
+  height: 25px;
+  padding: 5px;
+  background-color: #e4e4e4;
+  border: none;
+  border-radius: 7px;
+  color: black;
+  cursor: pointer;
+  box-sizing: border-box;
+  margin-top: 7px;
+  text-align: center;
+}
+.login-box input[type="button"] {
+  width: 260px;
+  height: 25px;
+  padding: 5px;
+  background-color: #e4e4e4;
+  border: none;
+  border-radius: 7px;
+  color: black;
+  cursor: pointer;
+  box-sizing: border-box;
+  margin-top: 7px;
+  text-align: center;
+}
+.form-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Menjadikan elemen dalam form-group sejajar */
 }

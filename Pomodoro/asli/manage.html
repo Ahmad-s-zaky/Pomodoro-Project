@@ -4,72 +4,88 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Manage</title>
-  </head>
-  <body>
-    <!--  font download -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet" />
-
-    <!-- css  -->
     <link rel="stylesheet" href="../css/manage_style.css" />
-
-    <!-- header logo -->
+  </head>
+  <body>
     <header>
       <img class="logo" src="../image/circle-gotrash-png.png" alt="logo" />
     </header>
+    <nav class="nav-list">
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a id= "userBtn" href="user.html">User</a></li>
+        <li><a href="seting.html">Settings</a></li>
+      </ul>
+    </nav>
 
     <main>
       <div class="container">
         <div class="jar">
-        <section>
+          <section>
             <h2>Time (minutes)</h2>
-        </section>
-
-        <section class="one">
-          <div class="dua">
-            <label for="">Pomodoro</label>
-            <input type="number" id="" value="25">
-          </div>
-          <div class="tiga">
-            <label for="">Short Break</label>
-            <input type="number" id="" value="15">
-          </div>
-          <div class="empat">
-            <label for="">Long Break</label>
-            <input type="number" id="" value="4">
-          </div>
-        </section>
-      </div>
-
-      <div class="tas">
-        <h2>kotak ajk</h2>
-      </div>
-      <div class="kotak">
-        <form>
-          <div class="nama">
-            <input type="text" id="nama" class="nama-saya" placeholder="masukan task">
-          </div>
-          <div class="nama">
-            <input type="text" id="nama" class="nama-saya" placeholder="masukan task">
-          </div>
-          <div class="nama">
-            <input type="text" id="nama" class="nama-saya" placeholder="masukan task">
-          </div>
-
+          </section>
+          <section class="one">
+            <div class="dua">
+              <label for="pomodoro">Pomodoro</label>
+              <input type="number" id="pomodoro" value="25" />
+            </div>
+            <div class="tiga">
+              <label for="short_break">Short Break</label>
+              <input type="number" id="short_break" value="15" />
+            </div>
+            <div class="empat">
+              <label for="long_break">Long Break</label>
+              <input type="number" id="long_break" value="4" />
+            </div>
+          </section>
         </div>
-
-        
-      </form>
-      <div>
-        <button class="btn">Start</button>
-
+        <div class="tas">
+          <h2>kotak ajk</h2>
         </div>
-     
-
-        
-        
-
+        <div class="kotak">
+          <form>
+            <div class="nama">
+              <input type="text" id="task1" class="nama-saya" placeholder="masukan task" />
+            </div>
+            <div class="nama">
+              <input type="text" id="task2" class="nama-saya" placeholder="masukan task" />
+            </div>
+            <div class="nama">
+              <input type="text" id="task3" class="nama-saya" placeholder="masukan task" />
+            </div>
+          </form>
+          <button id="animated-button">Start</button>
+        </div>
+      </div>
     </main>
+
+    <script>
+      document.getElementById("animated-button").addEventListener("click", function () {
+        const pomodoroTime = document.getElementById("pomodoro").value;
+        const shortBreakTime = document.getElementById("short_break").value;
+        const longBreakTime = document.getElementById("long_break").value;
+
+        const task1 = document.getElementById("task1").value;
+        const task2 = document.getElementById("task2").value;
+        const task3 = document.getElementById("task3").value;
+
+        localStorage.setItem("pomodoroTime", pomodoroTime);
+        localStorage.setItem("shortBreakTime", shortBreakTime);
+        localStorage.setItem("longBreakTime", longBreakTime);
+        localStorage.setItem("task1", task1);
+        localStorage.setItem("task2", task2);
+        localStorage.setItem("task3", task3);
+      });
+
+      document.getElementById("animated-button").addEventListener("click", function () {
+        this.classList.add("clicked"); // Menambahkan kelas 'clicked' saat tombol diklik
+        setTimeout(() => {
+          this.classList.remove("clicked"); // Menghapus kelas 'clicked' setelah jeda 0.3 detik
+        }, 300);
+      });
+    </script>
   </body>
 </html>
